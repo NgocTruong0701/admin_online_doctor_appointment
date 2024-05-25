@@ -1,0 +1,221 @@
+{
+    "data": [
+        {
+            "id": 3,
+            "email": "ngoctruongf10@gmail.com",
+            "role": "patient",
+            "verified": true,
+            "patient": {
+                "id": 1,
+                "name": "ngoctruongf10",
+                "date_of_birth": "2002-01-07",
+                "gender": 1,
+                "phone_number": "+84343630541",
+                "avatar": "https://i.pinimg.com/564x/4e/25/e3/4e25e3bca2e4d9e03e0725fa09edc0c0.jpg",
+                "address": "Hoàng Mai, Hà Nội",
+                "created_at": "2024-04-13T07:35:57.383Z",
+                "updated_at": "2024-05-13T04:15:27.206Z"
+            },
+            "doctor": null
+        },
+        {
+            "id": 4,
+            "email": "kimthcstt@gmail.com",
+            "role": "patient",
+            "verified": true,
+            "patient": {
+                "id": 2,
+                "name": "Kim Phượng",
+                "date_of_birth": "2002-10-28",
+                "gender": 1,
+                "phone_number": "+84343630541",
+                "avatar": "https://i.pinimg.com/564x/4e/25/e3/4e25e3bca2e4d9e03e0725fa09edc0c0.jpg",
+                "address": "Hoàng Mai, Đà Nẵng",
+                "created_at": "2024-04-13T07:35:57.383Z",
+                "updated_at": "2024-04-13T09:13:18.787Z"
+            },
+            "doctor": null
+        },
+        {
+            "id": 8,
+            "email": "truong.lengoc@ncc.asia",
+            "role": "doctor",
+            "verified": true,
+            "patient": null,
+            "doctor": {
+                "id": 1,
+                "name": "Doctor Trường",
+                "description": "Dr. Truongt is a board-certified pediatrician with over 15 years of experience. She is passionate about providing comprehensive and compassionate care to children of all ages. Dr. Carter has a special interest in preventive medicine, child development, and adolescent health. She is dedicated to building strong relationships with her patients and their families and believes in empowering parents to make informed decisions about their children's health. ",
+                "date_of_birth": "2000-01-01",
+                "gender": 1,
+                "phone_number": "+84362213123",
+                "avatar": "https://i.pinimg.com/564x/b0/f3/61/b0f361e9e26d27c62e38b350e4737d71.jpg",
+                "address": "Hoàng Mai, Hà Nội",
+                "hospital": "Bạch Mai",
+                "years_experience": 10,
+                "start_day_of_week": "monday",
+                "time_start": "07:00:00",
+                "end_day_of_week": "friday",
+                "time_end": "20:00:00",
+                "created_at": "2024-04-13T07:35:57.482Z",
+                "updated_at": "2024-05-03T08:28:43.150Z",
+                "specialization": {
+                    "id": 1,
+                    "name": "Dentis",
+                    "description": "Dentis",
+                    "icon": "https://doctor-appointment-bucket.s3.ap-southeast-1.amazonaws.com/category/Tooth.png",
+                    "created_at": "2024-04-13T07:35:57.449Z",
+                    "updated_at": "2024-04-29T17:41:49.695Z"
+                }
+            }
+        },
+        {
+            "id": 9,
+            "email": "ngoctruongcv@gmail.com",
+            "role": "patient",
+            "verified": true,
+            "patient": {
+                "id": 6,
+                "name": "Lê Ngọc Trường ",
+                "date_of_birth": "2020-01-20",
+                "gender": 1,
+                "phone_number": "+84928482727",
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLS4-kvLA4vPyUxvjc6pUt_0bsZd8-q1xhyREzR3OStHaGCKbFu=s96-c",
+                "address": "Bắc Từ Liêm 2, Hà Nội",
+                "created_at": "2024-04-29T15:22:54.779Z",
+                "updated_at": "2024-05-14T12:28:14.000Z"
+            },
+            "doctor": null
+        },
+        {
+            "id": 10,
+            "email": "abc@gmail.com",
+            "role": "doctor",
+            "verified": true,
+            "patient": null,
+            "doctor": {
+                "id": 2,
+                "name": "Doctor Hoàng Anh",
+                "description": "Dr. Hoang Anh is a board-certified pediatrician with over 15 years of experience. She is passionate about providing comprehensive and compassionate care to children of all ages. Dr. Carter has a special interest in preventive medicine, child development, and adolescent health. She is dedicated to building strong relationships with her patients and their families and believes in empowering parents to make informed decisions about their children's health. ",
+                "date_of_birth": "2000-01-02",
+                "gender": 2,
+                "phone_number": "+84362213123",
+                "avatar": "https://i.pinimg.com/564x/b0/f3/61/b0f361e9e26d27c62e38b350e4737d71.jpg",
+                "address": "Hoàng Mai, Hà Nội",
+                "hospital": "Việt Đức",
+                "years_experience": 5,
+                "start_day_of_week": "monday",
+                "time_start": "07:00:00",
+                "end_day_of_week": "friday",
+                "time_end": "20:00:00",
+                "created_at": "2024-04-13T07:35:57.482Z",
+                "updated_at": "2024-05-03T08:28:43.150Z",
+                "specialization": {
+                    "id": 2,
+                    "name": "Cardiologist",
+                    "description": "Cardiologist",
+                    "icon": "https://doctor-appointment-bucket.s3.ap-southeast-1.amazonaws.com/category/Brain.png",
+                    "created_at": "2024-04-13T07:35:57.449Z",
+                    "updated_at": "2024-04-29T17:41:49.697Z"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "email": "ngoctruong@gmail.com",
+            "role": "patient",
+            "verified": false,
+            "patient": null,
+            "doctor": null
+        },
+        {
+            "id": 14,
+            "email": "nhoccold71@gmail.com",
+            "role": "patient",
+            "verified": true,
+            "patient": {
+                "id": 9,
+                "name": "Nhóc Cold",
+                "date_of_birth": null,
+                "gender": null,
+                "phone_number": null,
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIMgdhy4qzREBZqx7VQUa1VwVIgkYkbWEfNJ2ulLtGSdVLUPY0=s96-c",
+                "address": null,
+                "created_at": "2024-05-13T15:07:09.803Z",
+                "updated_at": "2024-05-13T15:07:09.803Z"
+            },
+            "doctor": null
+        },
+        {
+            "id": 15,
+            "email": "ngoctruongf5@gmail.com",
+            "role": "doctor",
+            "verified": true,
+            "patient": null,
+            "doctor": {
+                "id": 4,
+                "name": "ngoctruongf5",
+                "description": null,
+                "date_of_birth": null,
+                "gender": null,
+                "phone_number": null,
+                "avatar": "https://doctor-appointment-bucket.s3.ap-southeast-1.amazonaws.com/avatar/default_avatar.jpg",
+                "address": null,
+                "hospital": null,
+                "years_experience": null,
+                "start_day_of_week": "monday",
+                "time_start": "08:00:00",
+                "end_day_of_week": "friday",
+                "time_end": "17:00:00",
+                "created_at": "2024-05-13T15:26:13.221Z",
+                "updated_at": "2024-05-13T15:30:39.019Z",
+                "specialization": {
+                    "id": 4,
+                    "name": "Neurologist",
+                    "description": "Neurologist",
+                    "icon": "https://doctor-appointment-bucket.s3.ap-southeast-1.amazonaws.com/category/Heart+Rate.png",
+                    "created_at": "2024-04-13T07:35:57.449Z",
+                    "updated_at": "2024-04-29T17:18:50.744Z"
+                }
+            }
+        },
+        {
+            "id": 16,
+            "email": "abc123@gmail.com",
+            "role": "patient",
+            "verified": false,
+            "patient": {
+                "id": 10,
+                "name": "abc123",
+                "date_of_birth": null,
+                "gender": null,
+                "phone_number": null,
+                "avatar": "https://doctor-appointment-bucket.s3.ap-southeast-1.amazonaws.com/avatar/avatar-default-svgrepo-com.svg",
+                "address": null,
+                "created_at": "2024-05-18T07:34:17.394Z",
+                "updated_at": "2024-05-18T07:34:17.394Z"
+            },
+            "doctor": null
+        },
+        {
+            "id": 17,
+            "email": "ngoctruongf6@gmail.com",
+            "role": "patient",
+            "verified": true,
+            "patient": {
+                "id": 11,
+                "name": "Le Ngoc Truong",
+                "date_of_birth": null,
+                "gender": null,
+                "phone_number": null,
+                "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK_jkUhegxsA4rrWXT7cAysL5xwSEBmuZK2ghr6IU4wPQ4p0A=s96-c",
+                "address": null,
+                "created_at": "2024-05-19T04:24:20.878Z",
+                "updated_at": "2024-05-19T04:24:20.878Z"
+            },
+            "doctor": null
+        }
+    ],
+    "statusCode": 200,
+    "message": "OK"
+}
