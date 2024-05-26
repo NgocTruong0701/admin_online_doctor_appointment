@@ -37,11 +37,11 @@ export const AppWeeklySales = (): JSX.Element => {
     return (
         <RootStyle>
             <IconWrapperStyle>
-                <Icon icon={androidFilled} width={24} height={24} />
+                <Icon icon={"fa6-solid:user-doctor"} width={24} height={24} />
             </IconWrapperStyle>
             <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
             <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-                Weekly Sales
+                Total Doctor
             </Typography>
         </RootStyle>
     );

@@ -29,12 +29,23 @@ export enum Gender {
     FeMale = 2
 }
 
+export interface IPackageAppointment {
+    id: number;
+    name: string;
+    price: number;
+    icon: string;
+    description?: string;
+}
+
 export interface IAppointment {
     id: number;
     date: Date;
     description: string;
     duration: number;
     status: string;
+    patient?: IPatient;
+    doctor?: IDoctor;
+    packageAppointment?: IPackageAppointment;
 }
 
 export interface IDoctor {

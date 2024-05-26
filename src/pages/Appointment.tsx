@@ -36,6 +36,9 @@ import { DatePicker } from '@mui/lab';
 import { sentenceCase } from '@/utils/stringHelper';
 
 const TABLE_HEAD: HeaderLabel[] = [
+    { id: 'doctor', label: 'Doctor', alignRight: false },
+    { id: 'patient', label: 'Patient', alignRight: false },
+    { id: 'packageAppointment', label: 'Package', alignRight: false },
     { id: 'date', label: 'Date', alignRight: false },
     { id: 'description', label: 'Description', alignRight: false },
     { id: 'duration', label: 'Duration', alignRight: false },
@@ -104,7 +107,10 @@ const Appointment = (): JSX.Element => {
                         date: new Date(s.date),
                         description: s.description,
                         duration: s.duration,
-                        status: sentenceCase(s.status)
+                        status: sentenceCase(s.status),
+                        patient: s.patient,
+                        doctor: s.doctor,
+                        packageAppointment: s.packageAppointment,
                     }))
                 );
             })
@@ -220,7 +226,7 @@ const Appointment = (): JSX.Element => {
                                     {filteredAppointments
                                         .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                         .map((row) => {
-                                            const { id, date, description, duration, status } = row;
+                                            const { id, doctor, patient, packageAppointment, date, description, duration, status } = row;
                                             // const isItemSelected = selected.indexOf(name) !== -1;
                                             return (
                                                 <TableRow
@@ -228,8 +234,8 @@ const Appointment = (): JSX.Element => {
                                                     key={id}
                                                     tabIndex={-1}
                                                     role="checkbox"
-                                                    // selected={isItemSelected}
-                                                    // aria-checked={isItemSelected}
+                                                // selected={isItemSelected}
+                                                // aria-checked={isItemSelected}
                                                 >
                                                     {/* <TableCell padding="checkbox">
                                                         <Checkbox
@@ -239,6 +245,18 @@ const Appointment = (): JSX.Element => {
                                                             }
                                                         />
                                                     </TableCell> */}
+                                                    <TableCell align="left">
+                                                        {doctor.name}
+                                                    </TableCell>
+
+                                                    <TableCell align="left">
+                                                        {patient.name}
+                                                    </TableCell>
+
+                                                    <TableCell align="left">
+                                                        {packageAppointment.name}
+                                                    </TableCell>
+
                                                     <TableCell align="left">
                                                         {(date as Date).toLocaleDateString()}
                                                     </TableCell>
@@ -254,8 +272,8 @@ const Appointment = (): JSX.Element => {
                                                                 status === 'Completed'
                                                                     ? 'success'
                                                                     : status === 'Cancelled'
-                                                                    ? 'error'
-                                                                    : 'warning'
+                                                                        ? 'error'
+                                                                        : 'warning'
                                                             }
                                                         >
                                                             {status}

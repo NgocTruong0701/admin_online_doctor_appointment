@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
 import { useTheme, styled } from '@mui/material/styles';
@@ -6,6 +6,7 @@ import { Card, CardHeader } from '@mui/material';
 import { fNumber } from '@/utils/formatNumber';
 import { BaseOptionChart } from '@/components/charts';
 import { ApexOptions } from 'apexcharts';
+import axiosClient from '@/api/axiosClient';
 
 const CHART_HEIGHT = 372;
 const LEGEND_HEIGHT = 72;
@@ -28,19 +29,23 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [4344, 5435, 1443, 4443];
+const CHART_DATA = [12, 55, 5];
 
 const AppCurrentVisits = (): JSX.Element => {
     const theme = useTheme();
 
+    // useEffect(() => {
+    //     axiosClient
+    //     .get('/')
+    // }, [])
     const chartOptions: ApexOptions = merge(BaseOptionChart(), {
         colors: [
             theme.palette.primary.main,
             theme.palette.info.main,
-            theme.palette.warning.main,
+            // theme.palette.warning.main,
             theme.palette.error.main
         ],
-        labels: ['America', 'Asia', 'Europe', 'Africa'],
+        labels: ['UpComming', 'Completed', 'Cancelled'],
         stroke: { colors: [theme.palette.background.paper] },
         legend: { floating: true, horizontalAlign: 'center' },
         dataLabels: { enabled: true, dropShadow: { enabled: false } },
@@ -60,7 +65,7 @@ const AppCurrentVisits = (): JSX.Element => {
 
     return (
         <Card>
-            <CardHeader title="Current Visits" />
+            <CardHeader title="Appointment Status" />
             <ChartWrapperStyle dir="ltr">
                 <ReactApexChart
                     type="pie"
