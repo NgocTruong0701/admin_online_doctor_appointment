@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
 import { useTheme, styled } from '@mui/material/styles';
@@ -31,13 +31,21 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 const CHART_DATA = [12, 55, 5];
 
+interface IAppointmentData {
+    appointmentUpComming: number; appointmentCompleted: number; appointmentCancelled: number;
+}
+
 const AppCurrentVisits = (): JSX.Element => {
     const theme = useTheme();
+    const [data, setData] = useState([0, 0, 0]);
 
-    // useEffect(() => {
-    //     axiosClient
-    //     .get('/')
-    // }, [])
+    useEffect(() => {
+        axiosClient.get('/admin/appointment-dashboard').then((response) => {
+            const data = response.data.data as IAppointmentData;
+            setData([data.appointmentUpComming, data.appointmentCompleted, data.appointmentCancelled]);
+        });
+    }, []);
+
     const chartOptions: ApexOptions = merge(BaseOptionChart(), {
         colors: [
             theme.palette.primary.main,
@@ -69,7 +77,7 @@ const AppCurrentVisits = (): JSX.Element => {
             <ChartWrapperStyle dir="ltr">
                 <ReactApexChart
                     type="pie"
-                    series={CHART_DATA}
+                    series={data}
                     options={chartOptions}
                     height={280}
                 />

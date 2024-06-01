@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Icon } from '@iconify/react';
 import androidFilled from '@iconify/icons-ant-design/android-filled';
 import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 import { fShortenNumber } from '@/utils/formatNumber';
+import { IDataAdminTotal } from '@/pages/DashboardApp';
 
 const RootStyle = styled(Card)(({ theme }) => ({
     boxShadow: 'none',
@@ -33,13 +34,14 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 714000;
 
-export const AppWeeklySales = (): JSX.Element => {
+export const AppWeeklySales = ({ countDoctor }: { countDoctor: number }): JSX.Element => {
+
     return (
         <RootStyle>
             <IconWrapperStyle>
                 <Icon icon={"fa6-solid:user-doctor"} width={24} height={24} />
             </IconWrapperStyle>
-            <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
+            <Typography variant="h3">{fShortenNumber(countDoctor)}</Typography>
             <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
                 Total Doctor
             </Typography>

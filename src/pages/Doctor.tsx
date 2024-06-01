@@ -85,7 +85,7 @@ const Doctor = (): JSX.Element => {
     const getData = useCallback(() => {
         setIsLoading(true);
         axiosClient
-            .get('/Doctors')
+            .get('/doctors/findAllAdmin')
             .then((res) => {
                 console.log(res.data.data);
 
